@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ListeCategories xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Categories>
+    <Categorie>
+      <Id>1</Id>
+      <Nom>Accompagnements apéritifs</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>2</Id>
+      <Nom>Biscuits, pâtisseries, viennoiseries</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>3</Id>
+      <Nom>Céréales et barres de céréales</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>4</Id>
+      <Nom>Confiseries, chocolat, friandises</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>5</Id>
+      <Nom>Petits déjeuners et collations : préparations pour boissons</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>6</Id>
+      <Nom>Petits déjeuners et collations : sur les tartines</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>7</Id>
+      <Nom>Aides culinaires et ingrédients pour cuisine et pâtisserie</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>8</Id>
+      <Nom>Charcuterie</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>9</Id>
+      <Nom>Boissons alcoolisées</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>10</Id>
+      <Nom>Boissons non alcoolisées</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>11</Id>
+      <Nom>Soja &amp; protéines végétales</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>12</Id>
+      <Nom>Sauces</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>13</Id>
+      <Nom>Pizzas, tartes et crêpes salées, produits traiteurs, salades</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>14</Id>
+      <Nom>Desserts lactés</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>15</Id>
+      <Nom>Yaourt</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>16</Id>
+      <Nom>Lait et laitages</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>17</Id>
+      <Nom>Glaces et desserts glacés</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>18</Id>
+      <Nom>Pains, pains grilles, biscottes, etc.</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>19</Id>
+      <Nom>Olives et oléagineux nature</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>20</Id>
+      <Nom>Fromages</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>21</Id>
+      <Nom>Fruits secs</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>22</Id>
+      <Nom>Fruits en conserve et compote</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>23</Id>
+      <Nom>Œufs</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>24</Id>
+      <Nom>Matières grasses</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>25</Id>
+      <Nom>Fruits frais surgelés ou nature</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>26</Id>
+      <Nom>Légumes frais  en conserve ou surgelés nature</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>27</Id>
+      <Nom>Poissons &amp; fruits de mer</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>28</Id>
+      <Nom>Féculents : légumineuses</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>29</Id>
+      <Nom>Féculents: céréales, pates, riz, pomme de terre, etc.</Nom>
+    </Categorie>
+    <Categorie>
+      <Id>30</Id>
+      <Nom>Viandes et volailles</Nom>
+    </Categorie>
+  </Categories>
+</ListeCategories>

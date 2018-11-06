@@ -1,0 +1,80 @@
+﻿<Application x:Class="WetProPoint.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WetProPoint"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <!--<Color x:Key="GlobalThemeColor">#FFF7B452</Color>-->
+        <Color x:Key="GlobalThemeColor">#FFF7B452</Color>
+        <Color x:Key="GlobalThemeColorWhite">WhiteSmoke</Color>
+        <ControlTemplate x:Key="RoundedButtonControlTemplate" TargetType="{x:Type Button}">
+            <Grid>
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <Storyboard>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.OpacityMask)" Storyboard.TargetName="contentPresenter">
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <SolidColorBrush Color="#FFEAE6E6"/>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="MouseOver">
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" Storyboard.TargetName="border">
+                                    <EasingColorKeyFrame KeyTime="0" Value="#FFC91010"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Cursor)" Storyboard.TargetName="border">
+                                    <DiscreteObjectKeyFrame KeyTime="0">
+                                        <DiscreteObjectKeyFrame.Value>
+                                            <Cursor>Hand</Cursor>
+                                        </DiscreteObjectKeyFrame.Value>
+                                    </DiscreteObjectKeyFrame>
+                                </ObjectAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                        <VisualState x:Name="Pressed"/>
+                        <VisualState x:Name="Disabled"/>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+                <Border x:Name="border" BorderBrush="Black" BorderThickness="1" CornerRadius="5">
+                    <Border.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="{DynamicResource GlobalThemeColor}" Offset="0"/>
+                            <GradientStop Color="{DynamicResource GlobalThemeColorWhite}" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <ContentPresenter x:Name="contentPresenter" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True"/>
+                </Border>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded" SourceName="border"/>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+        <Style x:Key="RoundedBorderStyle" TargetType="{x:Type Border}">
+            <Setter Property="CornerRadius" Value="10"/>
+            
+            <Setter Property="BorderBrush">
+                <Setter.Value>
+                    <SolidColorBrush Color="{DynamicResource GlobalThemeColor}"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderThickness" Value="3"/>
+            <Setter Property="Background" Value="#FFEAEAEA"/>
+            <Setter Property="Margin" Value="3"/>
+            <Setter Property="CornerRadius" Value="5"/>
+        </Style>
+        <Style x:Key="TextBlockPanelTitle" TargetType="{x:Type TextBlock}">
+            <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="18"/>
+        </Style>
+
+        <Style x:Key="noHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+            <Setter Property="Visibility" Value="Collapsed" />
+        </Style>
+    </Application.Resources>
+</Application>

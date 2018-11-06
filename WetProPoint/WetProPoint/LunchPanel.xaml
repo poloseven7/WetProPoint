@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="WetProPoint.LunchPanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WetProPoint"
+             mc:Ignorable="d" 
+             d:DesignHeight="245.588" d:DesignWidth="220.178">
+        
+        <Border Style="{DynamicResource RoundedBorderStyle}">
+        <TextBlock Text="{Binding Nom}" Style="{DynamicResource TextBlockPanelTitle}" >
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="{DynamicResource GlobalThemeColor}"/>
+            </TextBlock.Foreground>
+        </TextBlock>
+    </Border>
+</UserControl>
