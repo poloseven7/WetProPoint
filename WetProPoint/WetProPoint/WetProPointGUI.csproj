@@ -66,6 +66,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="InverseBooleanConverter.cs" />
     <Compile Include="LunchPanel.xaml.cs">
       <DependentUpon>LunchPanel.xaml</DependentUpon>
     </Compile>

@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="486.313" Width="919.711" Background="#00DED3D3"  WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterScreen" ResizeMode="CanResizeWithGrip">
     <Window.Resources>
+        <local:InverseBooleanConverter x:Key="inverseBooleanConverter"/>
         <Color x:Key="GlobalThemeWhiteColor">WhiteSmoke</Color>
     </Window.Resources>
 
@@ -117,8 +118,8 @@
                                             <RowDefinition/>
                                         </Grid.RowDefinitions>
                                         <TextBlock Text="{Binding SelectedItem.Categorie.Nom, ElementName=ingredientListView}" HorizontalAlignment="Center"/>
-                                        <ComboBox x:Name ="quantiteCombo" Grid.Row="1" ItemsSource="{Binding SelectedItem.QuantitesPoints, Mode=OneWay, ElementName=ingredientListView}" SelectedIndex="0"  Cursor="Hand"/>
-                                        <CheckBox Grid.Row="2" VerticalAlignment="Center" IsEnabled="{Binding SelectedItem.OptionPlusPossible, ElementName=ingredientListView}" Content="{Binding SelectedItem.OptionPlus, ElementName=ingredientListView}" ContentStringFormat="Choisir l'option plus à {0} points" Cursor="Hand"/>
+                                        <ComboBox x:Name ="quantiteCombo" Grid.Row="1" IsEnabled="{Binding ElementName=optionPlusCheck, Path=IsChecked, Converter={StaticResource inverseBooleanConverter}}" ItemsSource="{Binding SelectedItem.QuantitesPoints, Mode=OneWay, ElementName=ingredientListView}" SelectedIndex="0"  Cursor="Hand"/>
+                                        <CheckBox  x:Name ="optionPlusCheck" Grid.Row="2" VerticalAlignment="Center" IsEnabled="{Binding SelectedItem.OptionPlusPossible, ElementName=ingredientListView}" Content="{Binding SelectedItem.OptionPlus, ElementName=ingredientListView}" ContentStringFormat="Choisir l'option plus à {0} points" Cursor="Hand"/>
                                     </Grid>
                                 </Grid>
                             </Grid>

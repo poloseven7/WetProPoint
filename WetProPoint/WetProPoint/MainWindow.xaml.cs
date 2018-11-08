@@ -60,6 +60,7 @@ namespace WetProPoint
         private void ingredientListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             quantiteCombo.SelectedIndex = 0;
+            optionPlusCheck.IsChecked = false;
         }
 
         //public void ingredientListViewCollectionChanged(object sender, System.EventArgs e)

@@ -25,6 +25,15 @@ namespace WetProPoint
             }
         }
 
+        private Ingredient ingredient = new Ingredient();
+        public WetProPointData.Ingredient Ingredient
+        {
+            get { return ingredient; }
+            set { ingredient = value;
+                OnPropertyChanged("Ingredient");
+            }
+        }
+
         private Database database = new Database();
 
     }

@@ -10,7 +10,9 @@ namespace WetProPointData
         public bool UtiliserOptionPlus
         {
             get { return utiliserOptionPlus; }
-            set { utiliserOptionPlus = value; }
+            set { utiliserOptionPlus = value;
+                OnPropertyChanged("UtiliserOptionPlus");
+            }
         }
 
         public void CalculerPoints(int quantite)
