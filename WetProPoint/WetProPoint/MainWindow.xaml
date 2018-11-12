@@ -120,6 +120,14 @@
                                         <TextBlock Text="{Binding SelectedItem.Categorie.Nom, ElementName=ingredientListView}" HorizontalAlignment="Center"/>
                                         <ComboBox x:Name ="quantiteCombo" Grid.Row="1" IsEnabled="{Binding ElementName=optionPlusCheck, Path=IsChecked, Converter={StaticResource inverseBooleanConverter}}" ItemsSource="{Binding SelectedItem.QuantitesPoints, Mode=OneWay, ElementName=ingredientListView}" SelectedIndex="0"  Cursor="Hand"/>
                                         <CheckBox  x:Name ="optionPlusCheck" Grid.Row="2" VerticalAlignment="Center" IsEnabled="{Binding SelectedItem.OptionPlusPossible, ElementName=ingredientListView}" Content="{Binding SelectedItem.OptionPlus, ElementName=ingredientListView}" ContentStringFormat="Choisir l'option plus à {0} points" Cursor="Hand"/>
+                                        <Grid Grid.Row="3">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                                <ColumnDefinition/>
+                                            </Grid.ColumnDefinitions>
+                                            <Button x:Name="buttonPtiDej" Grid.Column="0" Content="+ Ptit dej" Click="buttonPtiDej_Click" />
+                                        </Grid>
                                     </Grid>
                                 </Grid>
                             </Grid>

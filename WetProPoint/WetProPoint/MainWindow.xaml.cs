@@ -63,6 +63,11 @@ namespace WetProPoint
             optionPlusCheck.IsChecked = false;
         }
 
+        private void buttonPtiDej_Click(object sender, RoutedEventArgs e)
+        {
+            viewModel.Utilisateur.Journee.PetitDej.AddIngredient(ingredientListView.SelectedItem as IngredientBase, optionPlusCheck.IsChecked == true);
+        }
+
         //public void ingredientListViewCollectionChanged(object sender, System.EventArgs e)
         //{
         //    AutoSizeGridViewColumns(ingredientListView);

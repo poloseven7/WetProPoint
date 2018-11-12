@@ -8,10 +8,41 @@
              d:DesignHeight="245.588" d:DesignWidth="220.178">
         
         <Border Style="{DynamicResource RoundedBorderStyle}">
-        <TextBlock Text="{Binding Nom}" Style="{DynamicResource TextBlockPanelTitle}" >
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="25"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="{Binding Nom}" Style="{DynamicResource TextBlockPanelTitle}" >
             <TextBlock.Foreground>
                 <SolidColorBrush Color="{DynamicResource GlobalThemeColor}"/>
             </TextBlock.Foreground>
         </TextBlock>
+            <ListView Grid.Row="1" x:Name="ingredientListView"  Width="Auto" ItemsSource="{Binding Ingredients}" Cursor="Hand">
+                <ListView.View>
+                    <GridView ColumnHeaderContainerStyle="{StaticResource noHeaderStyle}">
+                        <GridViewColumn Width="Auto" DisplayMemberBinding="{Binding Nom}" />
+                        <GridViewColumn Width="Auto" Header="">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ComboBox SelectedIndex="{Binding Quantite}" Cursor="Hand">
+                                        <ComboBoxItem>1</ComboBoxItem>
+                                        <ComboBoxItem>2</ComboBoxItem>
+                                        <ComboBoxItem>3</ComboBoxItem>
+                                        <ComboBoxItem>4</ComboBoxItem>
+                                        <ComboBoxItem>5</ComboBoxItem>
+                                        <ComboBoxItem>6</ComboBoxItem>
+                                        <ComboBoxItem>7</ComboBoxItem>
+                                        <ComboBoxItem>8</ComboBoxItem>
+                                        <ComboBoxItem>9</ComboBoxItem>
+                                        <ComboBoxItem>10</ComboBoxItem>
+                                    </ComboBox>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Grid>
     </Border>
 </UserControl>
